@@ -2,7 +2,7 @@ function ProfileImage (props) {
     return (
         <>
         <img
-        src={props.src}
+        src={props.image}
         className="profile"
         alt="profile"
       />
