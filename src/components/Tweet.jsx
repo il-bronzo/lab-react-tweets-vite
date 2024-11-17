@@ -1,21 +1,26 @@
 import ProfileImage from "./ProfileImage";
+import User from "./User";
 function Tweet(props) {
 
   return (
     <div className="tweet">
+    {/* I EXTRACT THE FOLLOWING IN ProfileImage.jsx.  src={props.tweet.user.image} is a LINK!!*/}
     {/*  <img
         src={props.tweet.user.image} 
         className="profile"
         alt="profile"
-      />    src={props.tweet.user.image} is a LINK!! */}
+      /> */}
       <ProfileImage image={props.tweet.user.image} />
 
       <div className="body">
         <div className="top">
-          <span className="user">
+        {/* I EXTRACT THE FOLLOWING IN User.jsx */}
+          {/* <span className="user">
             <span className="name">{props.tweet.user.name}</span>
             <span className="handle">@{props.tweet.user.handle}</span>
-          </span>
+          </span> */}
+
+          <User name = {props.tweet.user.name} handle={props.tweet.user.handle} />
 
           <span className="timestamp">{props.tweet.timestamp}</span>
         </div>
