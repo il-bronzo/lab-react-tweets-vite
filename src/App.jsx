@@ -40,7 +40,10 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet tweet={ tweetsArray[0] }></Tweet>
+    {tweetsArray.map((tweet, index)=> (<Tweet key={index} tweet={tweet}/>))}
+
+    {/* I REMOVE FOLLOWING LINE AFTER ADDING PREVIOUS ONE IN LAST ITERATION */}
+    {/* <Tweet tweet={ tweetsArray[0] }></Tweet> */}
     </div>
   );
 }
